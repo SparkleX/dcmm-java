@@ -5,7 +5,7 @@ import org.springframework.transaction.annotation.Transactional;
 
 public class BaseService<T extends BaseModel, DAO extends BaseDao<T>> {
 	@Autowired
-	DAO dao;
+	protected DAO dao;
 	
 	public T findById(Integer id) {
 		T data = dao.find(id);
