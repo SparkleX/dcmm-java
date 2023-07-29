@@ -1,0 +1,10 @@
+{
+    "title": "Repo",
+    "type": "object",
+    "properties": {
+    },
+    
+    "additionalProperties": {
+      "$ref": "Query.json"
+    }
+  }

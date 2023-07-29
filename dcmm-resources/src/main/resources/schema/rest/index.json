@@ -1,0 +1,15 @@
+{
+	"title": "RestApis",
+	"type": "object",
+	"additionalProperties": false,
+	"properties": {
+        "serviceName": {
+			"type": "string"
+        },
+		"methods": {
+			"$ref": "./Methods.json"
+		}
+	},
+	"required": [
+	]
+}

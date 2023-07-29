@@ -1,0 +1,20 @@
+{
+	"title": "Methods",
+	"type": "object",
+	"additionalProperties":  false,
+	"properties": {
+        "get": {
+			"$ref": "./MethodBinding.json"
+        },
+		"post": {
+			"$ref": "./MethodBinding.json"
+		},
+		"put": {
+			"$ref": "./MethodBinding.json"
+		},
+		"delete": {
+			"$ref": "./MethodBinding.json"
+		}
+	},
+	"required": []
+}

@@ -1,0 +1,29 @@
+{
+	"title": "Codes",
+	"type": "object",
+	"additionalProperties": false,
+	"properties": {
+		"codes": {
+			"type": "object",
+			"additionalProperties": {
+				"type": "string"
+			}
+		},
+		"order": {
+			"type": "array",
+			"items": {
+				"type": "string"
+			}
+		},
+		"codeList": {
+			"type": "array",
+			"items": {
+				"$ref": "CodeListItem.json"
+			}
+		}
+	},
+	"required": [
+		"codes",
+		"order"
+	]
+}

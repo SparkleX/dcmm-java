@@ -1,0 +1,7 @@
+{
+	"title": "MethodBinding",
+	"type": "object",
+    "additionalProperties": {
+        "type": "string"
+    }
+}

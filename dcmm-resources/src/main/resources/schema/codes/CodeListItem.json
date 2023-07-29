@@ -1,0 +1,14 @@
+{
+	"title": "CodeListItem",
+	"type": "object",
+	"additionalProperties": false,
+	"properties": {
+		"key": {
+			"type": "string"
+		},
+		"text": {
+			"type": "string"
+		}
+	},
+	"required": []
+}

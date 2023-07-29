@@ -1,0 +1,52 @@
+{
+	"title": "Table",
+	"type": "object",
+	"additionalProperties": false,
+	"properties": {
+		"name": {
+			"type": "string"
+		},
+		"fatherNode": {
+			"type": "string"
+		},
+		"fields": {
+			"type": "object",
+			"additionalProperties": false,
+			"patternProperties": {
+				"^[A-Z][A-Za-z0-9]{1,9}$": {
+					"$ref": "./Field.json"
+				}
+			}
+		},
+		"fieldsOrder": {
+			"type": "array",
+			"items": {
+				"type": "string"
+			}
+		},
+		"indexes": {
+			"type": "object",
+			"additionalProperties": {
+				"$ref": "./TableIndex.json"
+			}
+			
+		},
+		"transient": {
+			"type": "boolean"
+		},
+		"primaryKey": {
+			"type": "array",
+			"items": {
+				"type": "string"
+			}
+		},
+		"extends": {
+			"type": "string"
+		},
+		"descField": {
+			"type": "string"
+		}
+	},
+	"required": [
+	]
+}

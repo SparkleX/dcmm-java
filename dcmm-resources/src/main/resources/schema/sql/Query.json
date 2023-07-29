@@ -1,0 +1,26 @@
+{
+	"title": "Query",
+	"type": [
+		"string",
+		"object"
+	],
+	"properties": {
+		"sql": {
+			"type": "string"
+		},
+		"type": {
+			"type": "string",
+			"enum": [
+				"string",
+				"text",
+				"number",
+				"decimal",
+				"date",
+				"time"
+			]
+		}
+	},
+	"required": [
+		"sql"
+	]
+}

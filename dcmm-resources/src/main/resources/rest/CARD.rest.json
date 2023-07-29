@@ -1,0 +1,19 @@
+{
+    "serviceName":"CARD",
+    "methods": {
+        "get": {
+            "/CARD/data/:id" : "get",
+            "/CARD/find" : "find",
+            "/CARD/hello":"hello"
+        },
+        "post": {
+            "/CARD/data/" : "create"
+        },
+        "put": {
+            "/CARD/data/:id" : "update"
+        },
+        "delete": {
+            "/CARD/data/:id" : "delete"
+        }
+    }
+}

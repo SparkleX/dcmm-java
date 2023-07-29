@@ -1,0 +1,17 @@
+{
+	"title": "Index",
+	"type": "object",
+	"additionalProperties": false,
+	"properties": {
+		"unique": {
+			"type": "boolean"
+		},
+        "fields": {
+			"type": "array",
+			"items": {
+				"type": "string"
+			}
+		}
+	},
+	"required": []
+}
