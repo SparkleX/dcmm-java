@@ -30,7 +30,7 @@
 	<dependencies>
 		<dependency>
 			<groupId>com.next</groupId>
-			<artifactId>dcmm-framework</artifactId>
+			<artifactId>dcmm-framework-core</artifactId>
 			<version>0.0.1-SNAPSHOT</version>
 		</dependency>
 		<dependency>
