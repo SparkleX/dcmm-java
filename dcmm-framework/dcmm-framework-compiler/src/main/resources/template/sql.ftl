@@ -25,4 +25,13 @@ public interface ${name}Mapper extends BaseMapper<${name}Model> {
     );
 </#list>
 
+	@Select("select * from ${name} where NodeId=${r"#{id}"}")
+	${name}Model find(Integer id);
+
+    @Insert("")
+	void insert(${name}Model data);
+	@Update(" where NodeId=#")
+	boolean update(${name}Model data);
+	@Delete("delete  ${name} where NodeId=#")
+	boolean delete(int id);
 }
