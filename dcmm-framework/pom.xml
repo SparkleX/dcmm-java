@@ -8,7 +8,8 @@
     <artifactId>dcmm-framework</artifactId>
     <packaging>pom</packaging>
     <modules>
-        <module>dcmm-framework-core</module>
         <module>dcmm-framework-compiler</module>
+        <module>dcmm-framework-core</module>
+        <module>dcmm-framework-schema</module>
     </modules>
 </project>
