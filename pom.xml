@@ -14,5 +14,6 @@
 		<module>dcmm-app</module>
 		<module>dcmm-model</module>
 		<module>dcmm-resources</module>
+		<module>dcmm-init</module>
 	</modules>
 </project>

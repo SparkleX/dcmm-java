@@ -8,38 +8,4 @@
         <artifactId>dcmm</artifactId>
         <version>0.0.1-SNAPSHOT</version>
     </parent>
-    <build>
-        <plugins>
-            <!--<plugin>
-                <groupId>org.codehaus.mojo</groupId>
-                <artifactId>exec-maven-plugin</artifactId>
-                <executions>
-                    <execution>
-                        <?m2e ignore?>
-                        <id>generate-sources</id>
-                        <phase>generate-sources</phase>
-                        <goals>
-                            <goal>exec</goal>
-                        </goals>
-                        <configuration>
-                            <executable>dcmm-compile-java</executable>
-                            <arguments>
-                                <argument>-jar</argument>
-                                <argument>1</argument>
-                                <argument>7</argument>
-                                <argument>6</argument>
-                            </arguments>
-                        </configuration>
-                    </execution>
-                </executions>
-            </plugin>-->
-        </plugins>
-    </build>
-    <dependencies>
-        <dependency>
-            <groupId>com.next</groupId>
-            <artifactId>dcmm-framework</artifactId>
-            <version>0.0.1-SNAPSHOT</version>
-        </dependency>
-    </dependencies>
 </project>
