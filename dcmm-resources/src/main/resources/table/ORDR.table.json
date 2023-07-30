@@ -1,7 +1,7 @@
 {
 	"name": "ORDR",
 	"fields": {
-		"NodeID": {
+		"NodeId": {
 			"type": "uuid"
 		},
 		"CardCode": {

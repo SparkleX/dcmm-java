@@ -31,7 +31,7 @@ public class TableTemplate implements InitializingBean
         String content = IOUtils.toString(is, "utf8");
         is.close();
 
-        Configuration cfg = new Configuration(new Version(2, 3, 20));
+        Configuration cfg = new Configuration(new Version(2, 3, 32));
         StringTemplateLoader dummyLoader = new StringTemplateLoader();
         dummyLoader.putTemplate("table", content);
         cfg.setTemplateLoader(dummyLoader);

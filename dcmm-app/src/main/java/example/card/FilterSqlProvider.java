@@ -1,4 +1,4 @@
-package example.foo;
+package example.card;
 
 import org.apache.ibatis.jdbc.SQL;
 

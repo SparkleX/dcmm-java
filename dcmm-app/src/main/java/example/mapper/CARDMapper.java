@@ -1,30 +1,24 @@
 package example.mapper;
 
-import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+import gen.dao.CARDDao;
 import org.apache.ibatis.annotations.Delete;
 import org.apache.ibatis.annotations.Insert;
 import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Param;
 import org.apache.ibatis.annotations.Select;
-import org.apache.ibatis.annotations.SelectProvider;
-import org.apache.ibatis.annotations.TypeDiscriminator;
 import org.apache.ibatis.annotations.Update;
-import org.apache.ibatis.annotations.ResultMap;
-import org.apache.ibatis.annotations.ResultType;
 
-import example.foo.Filter;
-import example.foo.FilterSqlProvider;
-import gen.dao.FooDao;
-import gen.model.FooModel;
+import example.card.Filter;
+import gen.model.CARDModel;
 
 @Mapper
-public interface FooMapper extends FooDao {
+public interface CARDMapper extends CARDDao {
 
   @Select("select * from foo")
-  FooModel findByState(@Param("state") String state);
+  CARDModel findByState(@Param("state") String state);
   
   
   //@SelectProvider(type=FilterSqlProvider.class, method = "filter")
@@ -37,13 +31,13 @@ public interface FooMapper extends FooDao {
   
   
   @Select("select * from foo where NodeId=#{id}")
-  FooModel find(Integer id);
+  CARDModel find(Integer id);
 
   @Insert("insert into foo (NodeId, Data) values(#{NodeId}, #{Data})")
-  void insert(FooModel data);
+  void insert(CARDModel data);
   
   @Update("update foo set Data = #{Data} where NodeId = #{NodeId}")
-  boolean update(FooModel foo);
+  boolean update(CARDModel foo);
   
   @Delete("delete from foo where NodeId = #{id}")
   boolean delete(Integer id);

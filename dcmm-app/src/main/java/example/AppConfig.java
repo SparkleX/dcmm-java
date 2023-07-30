@@ -1,7 +1,5 @@
 package example;
 
-import java.util.Properties;
-
 import javax.sql.DataSource;
 
 import org.apache.ibatis.plugin.Interceptor;
@@ -10,7 +8,7 @@ import org.mybatis.spring.SqlSessionFactoryBean;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
-import example.foo.ExamplePlugin;
+import example.card.ExamplePlugin;
 
 @Configuration
 public class AppConfig {

@@ -1,7 +1,7 @@
 {
     "name": "CARD",
     "fields": {
-        "NodeID":{
+        "NodeId":{
             "type": "uuid"
         },
         "CardCode":{

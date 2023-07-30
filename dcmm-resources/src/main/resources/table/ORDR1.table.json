@@ -1,0 +1,8 @@
+{
+	"name": "ORDR1",
+	"fields": {
+		"NodeId": {
+			"type": "uuid"
+		}
+	}
+}

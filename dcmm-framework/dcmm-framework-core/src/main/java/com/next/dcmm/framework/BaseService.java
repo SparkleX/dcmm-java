@@ -3,7 +3,7 @@ package com.next.dcmm.framework;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.transaction.annotation.Transactional;
 
-public class BaseService<T extends BaseModel, DAO extends BaseDao<T>> {
+public class BaseService<T, DAO extends BaseDao<T>> {
 	@Autowired
 	protected DAO dao;
 	
@@ -14,11 +14,12 @@ public class BaseService<T extends BaseModel, DAO extends BaseDao<T>> {
 	@Transactional
 	public Integer create(T data) {
 		dao.insert(data);
-		return data.NodeId;
+		Integer id = BaseModel.getNodeId(data);
+		return id;
 	}
 	@Transactional
 	public void update(Integer id, T data) {
-		data.NodeId = id;
+		BaseModel.setNodeId(data, id);
 		dao.update(data);
 	}
 	@Transactional

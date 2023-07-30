@@ -23,7 +23,7 @@ public class TableCompiler {
     @Value(value = "${folder.output}")
     String outputFilder;
     String tableResourceFolder;
-
+    String sourceCodeFolder;
     public static void main(String[] args) throws Exception {
         ConfigurableApplicationContext appCtx = SpringApplication.run(TableCompiler.class, args);
         TableCompiler inst = appCtx.getBean(TableCompiler.class);
@@ -32,6 +32,8 @@ public class TableCompiler {
 
     private void run(String[] args) throws Exception {
         tableResourceFolder = resourcesFolder + File.separator + "table";
+        sourceCodeFolder =  outputFilder + File.separator + "java" + File.separator + "gen"+ File.separator + "model";
+
         File f = new File(tableResourceFolder);
         FilenameFilter filter = new FilenameFilter() {
             @Override
@@ -68,7 +70,7 @@ public class TableCompiler {
         //map.put("virtualColumn", virtualColumn);
         StringWriter sw = new StringWriter();
         this.template.getTemplate().process(oTable, sw);
-        String filePath = outputFilder + File.separator + oTable.name + "Model.java";
+        String filePath = sourceCodeFolder + File.separator + oTable.name + "Model.java";
         FileUtils.writeStringToFile(new File(filePath), sw.toString(), "utf8");
     }
 }

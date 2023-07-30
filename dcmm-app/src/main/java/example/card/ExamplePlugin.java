@@ -1,4 +1,4 @@
-package example.foo;
+package example.card;
 
 import java.sql.Statement;
 import java.util.Properties;

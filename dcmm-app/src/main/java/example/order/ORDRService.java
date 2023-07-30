@@ -18,8 +18,8 @@ public class ORDRService extends BaseService<ORDRModel, ORDRMapper> {
 	
 	@Transactional
 	public Integer create(ORDRModel data) {
-		dao.insert(data);
-		return data.NodeId;
+		Integer rt = super.create(data);
+		return rt;
 	}
 	
 	

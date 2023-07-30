@@ -1,18 +1,15 @@
-package example.foo;
-
-import java.util.HashMap;
-import java.util.List;
+package example.card;
 
 import org.springframework.stereotype.Service;
 
 import com.next.dcmm.framework.BaseService;
 import com.next.dcmm.framework.SqlTransaction;
 
-import example.mapper.FooMapper;
-import gen.model.FooModel;
+import example.mapper.CARDMapper;
+import gen.model.CARDModel;
 
 @Service
-public class FooService extends BaseService<FooModel, FooMapper> {
+public class CARDService extends BaseService<CARDModel, CARDMapper> {
 	
 	public Object findAll() {
 		Filter filter = new Filter();
@@ -32,11 +29,10 @@ public class FooService extends BaseService<FooModel, FooMapper> {
 	
 	//@Transactional
 	@SqlTransaction
-	public FooModel function1(String p1, String p2) {
-		
-		FooModel data = new FooModel();
-		data.NodeId = 4;
-		data.Data = "c";
+	public CARDModel function1(String p1, String p2) {
+
+		CARDModel data = new CARDModel();
+		data.NodeId = "4";
 		super.dao.insert(data);
 		/*data.NodeId = 2;
 		data.Data = "c";
