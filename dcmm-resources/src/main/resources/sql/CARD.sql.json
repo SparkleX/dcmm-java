@@ -1,5 +1,10 @@
 {
     "findXXXById":{
-        "sql" : "select * from CARD"
+        "sql" : "select * from CARD",
+        "returnType": "List<Map<String,Object>>",
+        "params": {
+            "nodeId": "String",
+            "nodeId2": "String"
+        }
     }
 }

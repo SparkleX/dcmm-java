@@ -1,11 +1,11 @@
 package example.card;
 
+import gen.mapper.CARDMapper;
 import org.springframework.stereotype.Service;
 
 import com.next.dcmm.framework.BaseService;
 import com.next.dcmm.framework.SqlTransaction;
 
-import example.mapper.CARDMapper;
 import gen.model.CARDModel;
 
 @Service
@@ -23,7 +23,7 @@ public class CARDService extends BaseService<CARDModel, CARDMapper> {
 		//map.put("sql", sql);
 		//map.put("id", Integer.valueOf(1));
 		//Object rt = super.dao.findAll(map);
-		Object rt = super.dao.findAll(filter);
+		Object rt = null;//super.dao.findAll(filter);
 		return rt;
 	}
 	

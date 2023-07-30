@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 
-public class BaseController<T,DAO extends BaseDao<T>,SVC extends BaseService<T,DAO>> {
+public class BaseController<T,DAO extends BaseMapper<T>,SVC extends BaseService<T,DAO>> {
 	
 	@Autowired
 	protected SVC service;

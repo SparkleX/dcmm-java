@@ -8,21 +8,13 @@ import org.mybatis.spring.SqlSessionFactoryBean;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
-import example.card.ExamplePlugin;
-
 @Configuration
 public class AppConfig {
-    @Bean
+   /* @Bean
     public SqlSessionFactory sqlSessionFactory(DataSource dataSource)
             throws Exception {
         SqlSessionFactoryBean sfb = new SqlSessionFactoryBean();
         sfb.setDataSource(dataSource);
-
-        //Properties prop = new Properties();
-        //prop.setProperty("dialect", "mysql");
-
-        //PageHelper pagePlugin = new PageHelper();
-        //pagePlugin.setProperties(prop);
 
         ExamplePlugin plugin = new ExamplePlugin();
         Interceptor[] plugins = {plugin};
@@ -31,5 +23,5 @@ public class AppConfig {
         SqlSessionFactory factory = sfb.getObject();
         //factory.getConfiguration().setMapUnderscoreToCamelCase(true);
         return factory;
-    }
+    }*/
 }

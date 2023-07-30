@@ -1,4 +1,4 @@
-package com.next.dcmm.framework.compiler;
+package com.next.dcmm.framework.compiler.table;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.next.dcmm.framework.schema.table.Table;
@@ -8,15 +8,14 @@ import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ConfigurableApplicationContext;
+import org.springframework.stereotype.Component;
 
 import java.io.*;
 import java.util.HashMap;
 
-import java.util.Set;
-
 
 // --folder.source=/Users/i031684/eclipse-workspace/dcmm/dcmm-resources/src/main/resources/table
-@SpringBootApplication
+@Component
 public class TableCompiler {
     @Value(value = "${folder.resources}")
     String resourcesFolder;
@@ -24,13 +23,9 @@ public class TableCompiler {
     String outputFilder;
     String tableResourceFolder;
     String sourceCodeFolder;
-    public static void main(String[] args) throws Exception {
-        ConfigurableApplicationContext appCtx = SpringApplication.run(TableCompiler.class, args);
-        TableCompiler inst = appCtx.getBean(TableCompiler.class);
-        inst.run(args);
-    }
 
-    private void run(String[] args) throws Exception {
+
+    public void run(String[] args) throws Exception {
         tableResourceFolder = resourcesFolder + File.separator + "table";
         sourceCodeFolder =  outputFilder + File.separator + "java" + File.separator + "gen"+ File.separator + "model";
 
@@ -61,7 +56,7 @@ public class TableCompiler {
         File file = new File(fullFileName);
         Table oTable = mapper.readValue(file, Table.class);
 
-        HashMap<String, Object> map = new HashMap<>();
+        //HashMap<String, Object> map = new HashMap<>();
         // Set<String> virtualColumn = tbl.getVirtualColumns().stream()
         //       .map(MetaColumn::getColumnName)
         //     .collect(Collectors.toSet());

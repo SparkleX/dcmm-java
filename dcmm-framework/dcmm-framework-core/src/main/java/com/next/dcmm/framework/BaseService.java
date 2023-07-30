@@ -3,7 +3,7 @@ package com.next.dcmm.framework;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.transaction.annotation.Transactional;
 
-public class BaseService<T, DAO extends BaseDao<T>> {
+public class BaseService<T, DAO extends BaseMapper<T>> {
 	@Autowired
 	protected DAO dao;
 	

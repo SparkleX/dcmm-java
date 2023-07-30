@@ -1,6 +1,6 @@
 package com.next.dcmm.framework;
 
-public interface BaseDao<MODEL> {
+public interface BaseMapper<MODEL> {
 	MODEL find(Integer id);
 	void insert(MODEL foo);
 	boolean update(MODEL foo);
