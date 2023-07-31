@@ -1,11 +1,9 @@
 package com.next.dcmm.framework;
 
-import org.apache.el.util.ReflectionUtil;
-
-import java.lang.reflect.Field;
 
 public class BaseModel {
-	static final  String NODE_ID = "NodeId";
+	public String NodeId;
+	/*static final  String NODE_ID = "NodeId";
 	public static <T> void setNodeId(T data, Integer id) {
 		try {
 			Field field = data.getClass().getDeclaredField(NODE_ID);
@@ -25,5 +23,5 @@ public class BaseModel {
 			ex.printStackTrace();
 			throw new RuntimeException(ex);
 		}
-	}
+	}*/
 }

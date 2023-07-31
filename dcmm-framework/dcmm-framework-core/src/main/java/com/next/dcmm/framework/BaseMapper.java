@@ -1,8 +1,11 @@
 package com.next.dcmm.framework;
 
+import java.util.List;
+
 public interface BaseMapper<MODEL> {
-	MODEL find(Integer id);
+	List<MODEL> findAll();
+	MODEL find(String id);
 	void insert(MODEL foo);
 	boolean update(MODEL foo);
-	boolean delete(int id);
+	boolean delete(String id);
 }

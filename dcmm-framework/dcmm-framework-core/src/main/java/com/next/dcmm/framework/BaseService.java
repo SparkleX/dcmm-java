@@ -1,29 +1,36 @@
 package com.next.dcmm.framework;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.transaction.annotation.Transactional;
 
-public class BaseService<T, DAO extends BaseMapper<T>> {
+public class BaseService<T extends BaseModel, DAO extends BaseMapper<T>> {
 	@Autowired
 	protected DAO dao;
+
 	
-	public T findById(Integer id) {
+	public List<T> findAll() {
+		List<T> data = dao.findAll();
+		return data;
+	}
+	
+	public T findById(String id) {
 		T data = dao.find(id);
 		return data;
 	}
 	@Transactional
-	public Integer create(T data) {
+	public String create(T data) {
 		dao.insert(data);
-		Integer id = BaseModel.getNodeId(data);
-		return id;
+		return data.NodeId;
 	}
 	@Transactional
-	public void update(Integer id, T data) {
-		BaseModel.setNodeId(data, id);
+	public void update(String id, T data) {
+		data.NodeId = id;
 		dao.update(data);
 	}
 	@Transactional
-	public void delete(Integer id) {
+	public void delete(String id) {
 		dao.delete(id);
 	}
 }

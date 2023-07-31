@@ -17,8 +17,8 @@ public class ORDRService extends BaseService<ORDRModel, ORDRMapper> {
 	ORDR1Mapper daoORDR1;
 	
 	@Transactional
-	public Integer create(ORDRModel data) {
-		Integer rt = super.create(data);
+	public String create(ORDRModel data) {
+		String rt = super.create(data);
 		return rt;
 	}
 	

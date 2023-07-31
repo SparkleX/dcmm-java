@@ -1,5 +1,5 @@
 {
-	"findAll": {
+	"findAll2": {
 		"sql": "select * from ORDR",
 		"returnType": "List<Map<String,Object>>",
 		"params": {

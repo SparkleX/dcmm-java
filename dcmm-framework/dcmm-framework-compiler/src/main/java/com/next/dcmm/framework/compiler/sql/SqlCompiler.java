@@ -57,17 +57,41 @@ public class SqlCompiler {
         File file = new File(fullFileName);
         Mapper oMapper = mapper.readValue(file, Mapper.class);
         String name = fileName.split("\\.")[0];
-
+        
+        String tableFile = tableResourceFolder + File.separator + name + ".table.json";
+        Table oTable = mapper.readValue(new File(tableFile), Table.class);
 
         HashMap<String, Object> data = new HashMap<>();
         data.put("name", name);
         data.put("data", oMapper);
+        String sqlInsert = sqlInsert(oTable);
+        data.put("sqlInsert", sqlInsert);
+        String sqlUpdate = sqlUpdate(oTable);
 
-
-        HashMap<String, Object> map = new HashMap<>();
+        data.put("sqlUpdate", sqlUpdate);
         StringWriter sw = new StringWriter();
         this.template.getTemplate().process(data, sw);
         String filePath = sourceCodeFolder + File.separator + name + "Mapper.java";
         FileUtils.writeStringToFile(new File(filePath), sw.toString(), "utf8");
+    }
+    private String sqlUpdate(Table oTable) {
+    	StringBuilder sbParams = new StringBuilder();
+    	for(String field:oTable.fields.keySet()) {
+    		sbParams.append(field).append("=#{").append(field).append("},");
+    	}
+    	sbParams.setLength(sbParams.length()-1);
+
+    	return String.format("update %s set %s where NodeId = #{NodeId}", oTable.name, sbParams.toString());
+	}
+    private String sqlInsert(Table oTable) {
+    	StringBuilder sbFields = new StringBuilder();
+    	StringBuilder sbParams = new StringBuilder();
+    	for(String field:oTable.fields.keySet()) {
+    		sbFields.append(field).append(",");
+    		sbParams.append("#{").append(field).append("},");
+    	}
+    	sbFields.setLength(sbFields.length()-1);
+    	sbParams.setLength(sbParams.length()-1);
+    	return String.format("insert into %s(%s) values(%s)", oTable.name, sbFields.toString(), sbParams.toString());
     }
 }
