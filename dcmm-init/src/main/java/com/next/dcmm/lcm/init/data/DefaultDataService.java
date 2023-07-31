@@ -12,7 +12,6 @@ import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.stereotype.Component;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
-import com.next.dcmm.framework.schema.table.Table;
 
 @Component
 public class DefaultDataService {
@@ -20,12 +19,12 @@ public class DefaultDataService {
 	private Resource[] resources;
 	
 	public void insertAll() throws Exception {
-		List<String> sqls = new ArrayList<String>();
 		for (final Resource res : resources) {
 			System.out.println(res.getFilename());
 	        try (InputStream inputStream = res.getInputStream()) {
 	            ObjectMapper mapper = new ObjectMapper();
-	            List<Map<String,Object>> data = mapper.readValue(inputStream, List.class);
+	            @SuppressWarnings("unchecked")
+				List<Map<String,Object>> data = mapper.readValue(inputStream, List.class);
 	            String tableName = res.getFilename().split("\\.")[0];
 	            for(Map<String,Object> row:data) {
 	            	this.insert(tableName, row);

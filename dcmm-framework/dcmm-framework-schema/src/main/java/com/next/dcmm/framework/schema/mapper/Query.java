@@ -1,6 +1,5 @@
 package com.next.dcmm.framework.schema.mapper;
 
-import java.util.HashMap;
 import java.util.Map;
 
 public class Query {

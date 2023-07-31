@@ -1,20 +1,18 @@
 package com.next.dcmm.framework.compiler.table;
 
-import com.fasterxml.jackson.databind.ObjectMapper;
-import com.next.dcmm.framework.schema.table.Table;
+import java.io.File;
+import java.io.FilenameFilter;
+import java.io.StringWriter;
+
 import org.apache.commons.io.FileUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
-import org.springframework.boot.SpringApplication;
-import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.context.ConfigurableApplicationContext;
 import org.springframework.stereotype.Component;
 
-import java.io.*;
-import java.util.HashMap;
+import com.fasterxml.jackson.databind.ObjectMapper;
+import com.next.dcmm.framework.schema.table.Table;
 
 
-// --folder.source=/Users/i031684/eclipse-workspace/dcmm/dcmm-resources/src/main/resources/table
 @Component
 public class TableCompiler {
     @Value(value = "${folder.resources}")
