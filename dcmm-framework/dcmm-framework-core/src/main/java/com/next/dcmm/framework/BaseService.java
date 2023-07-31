@@ -27,10 +27,16 @@ public class BaseService<T extends BaseModel, DAO extends BaseMapper<T>> {
 	@Transactional
 	public void update(String id, T data) {
 		data.NodeId = id;
-		dao.update(data);
+		int rt = dao.update(data);
+		if(rt!=1) {
+			throw new RuntimeException("delete failed");
+		}
 	}
 	@Transactional
 	public void delete(String id) {
-		dao.delete(id);
+		int rt = dao.delete(id);
+		if(rt!=1) {
+			throw new RuntimeException("delete failed");
+		}
 	}
 }

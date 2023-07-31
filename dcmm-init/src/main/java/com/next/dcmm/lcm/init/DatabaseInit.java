@@ -9,6 +9,8 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ConfigurableApplicationContext;
 import org.springframework.jdbc.core.JdbcTemplate;
 
+import com.next.dcmm.lcm.init.data.DefaultDataService;
+
 @SpringBootApplication
 public class DatabaseInit {
     public static void main(String[] args) throws Exception {
@@ -17,10 +19,10 @@ public class DatabaseInit {
         inst.run(args);
     }
 
-
-
     @Autowired
     TableService tableService;
+    @Autowired
+    DefaultDataService dataService;
     @Autowired
     JdbcTemplate jdbcTemplate;
     private void run(String[] args) throws Exception {
@@ -29,5 +31,6 @@ public class DatabaseInit {
     		System.out.println(sql);
     		jdbcTemplate.execute(sql);
     	}
+    	dataService.insertAll();
     }
 }

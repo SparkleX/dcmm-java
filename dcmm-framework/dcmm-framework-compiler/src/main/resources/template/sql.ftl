@@ -33,7 +33,7 @@ public interface ${name}Mapper extends BaseMapper<${name}Model> {
     @Insert("${sqlInsert}")
 	void insert(${name}Model data);
 	@Update("${sqlUpdate}")
-	boolean update(${name}Model data);
-	@Delete("delete  ${name} where NodeId=#")
-	boolean delete(int id);
+	int update(${name}Model data);
+	@Delete("delete from ${name} where NodeId=${r"#{NodeId}"}")
+	int delete(String id);
 }

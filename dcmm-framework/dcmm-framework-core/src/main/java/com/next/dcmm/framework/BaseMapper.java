@@ -6,6 +6,6 @@ public interface BaseMapper<MODEL> {
 	List<MODEL> findAll();
 	MODEL find(String id);
 	void insert(MODEL foo);
-	boolean update(MODEL foo);
-	boolean delete(String id);
+	int update(MODEL foo);
+	int delete(String id);
 }
