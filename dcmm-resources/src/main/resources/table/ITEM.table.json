@@ -2,7 +2,7 @@
 	"name": "ITEM",
 	"fields": {
 		"NodeId": {
-			"type": "string"
+			"type": "uuid"
 		}
 	}
 }

@@ -1,10 +1,13 @@
 
 package com.next.dcmm.lcm.init;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ConfigurableApplicationContext;
+import org.springframework.jdbc.core.JdbcTemplate;
 
 @SpringBootApplication
 public class DatabaseInit {
@@ -14,9 +17,17 @@ public class DatabaseInit {
         inst.run(args);
     }
 
+
+
     @Autowired
     TableService tableService;
+    @Autowired
+    JdbcTemplate jdbcTemplate;
     private void run(String[] args) throws Exception {
-    	tableService.list();
+    	List<String> sqls = tableService.createSqls();
+    	for(String sql:sqls) {
+    		System.out.println(sql);
+    		jdbcTemplate.execute(sql);
+    	}
     }
 }
