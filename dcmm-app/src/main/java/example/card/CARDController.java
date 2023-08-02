@@ -11,7 +11,7 @@ import gen.mapper.CARDMapper;
 import gen.model.CARDModel;
 
 @RestController
-@RequestMapping(path="/card")
+@RequestMapping(path="/CARD")
 public class CARDController extends BaseController<CARDModel, CARDMapper, CARDService>{
 
 

@@ -11,7 +11,7 @@ import com.next.dcmm.framework.BaseController;
 import gen.model.ORDRModel;
 
 @RestController
-@RequestMapping(path="/ordr")
+@RequestMapping(path="/ORDR")
 public class ORDRController extends BaseController<ORDRModel, ORDRMapper, ORDRService>{
 
 

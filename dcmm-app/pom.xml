@@ -38,5 +38,15 @@
 			<artifactId>dcmm-model</artifactId>
 			<version>0.0.1-SNAPSHOT</version>
 		</dependency>
+		<dependency>
+			<groupId>com.next</groupId>
+			<artifactId>dcmm-framework-schema</artifactId>
+			<version>0.0.1-SNAPSHOT</version>
+		</dependency>
+		<dependency>
+			<groupId>com.next</groupId>
+			<artifactId>dcmm-resources</artifactId>
+			<version>0.0.1-SNAPSHOT</version>
+		</dependency>		
 	</dependencies>
 </project>

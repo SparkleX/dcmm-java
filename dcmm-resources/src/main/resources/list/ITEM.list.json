@@ -1,0 +1,14 @@
+{
+	"columns": {
+		"ItemCode": {
+			"name":"Item Code"
+		},
+		"ItemName": {
+			"name":"Item Name"
+		}
+	},
+	"order": [
+		"ItemCode",
+		"ItemName"
+	]
+}
