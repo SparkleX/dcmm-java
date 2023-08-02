@@ -1,4 +1,4 @@
-package example;
+package dcmm;
 
 import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.boot.SpringApplication;

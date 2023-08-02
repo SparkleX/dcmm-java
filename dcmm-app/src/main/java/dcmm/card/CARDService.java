@@ -1,4 +1,4 @@
-package example.card;
+package dcmm.card;
 
 import org.springframework.stereotype.Service;
 

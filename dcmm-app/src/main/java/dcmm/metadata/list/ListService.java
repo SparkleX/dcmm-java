@@ -1,9 +1,8 @@
-package example.metadata.list;
+package dcmm.metadata.list;
 
 import java.io.InputStream;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.factory.annotation.Value;
 import org.springframework.core.io.Resource;
 import org.springframework.core.io.ResourceLoader;
 import org.springframework.stereotype.Service;
@@ -13,8 +12,7 @@ import com.next.dcmm.framework.schema.list.ListView;
 
 @Service
 public class ListService {
-	@Value("classpath:data/*.data.json")
-	private Resource[] resources;
+
 	
 	@Autowired
 	ResourceLoader resourceLoader;

@@ -1,0 +1,20 @@
+[
+	{
+		"NodeId": "17881ce6-310a-11ee-be56-0242ac120002",
+		"ItemCode": "I001",
+		"ItemName": "iPod",
+		"Active": "Y"
+	},
+	{
+		"NodeId": "17882088-310a-11ee-be56-0242ac120002",
+		"ItemCode": "I002",
+		"ItemName": "iMac",
+		"Active": "Y"
+	},
+	{
+		"NodeId": "1788222c-310a-11ee-be56-0242ac120002",
+		"ItemCode": "I003",
+		"ItemName": "MacBookPro",
+		"Active": "Y"
+	}
+]

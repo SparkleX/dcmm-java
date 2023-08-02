@@ -3,6 +3,24 @@
 	"fields": {
 		"NodeId": {
 			"type": "uuid"
+		},
+		"ParentId": {
+			"type": "uuid"
+		},
+		"LineNum": {
+			"type": "number"
+		},
+		"ItemId": {
+			"type": "uuid"
+		},
+		"Qty": {
+			"type": "decimal"
+		},
+		"Price": {
+			"type": "decimal"
+		},
+		"LineTotal": {
+			"type": "decimal"
 		}
 	}
 }

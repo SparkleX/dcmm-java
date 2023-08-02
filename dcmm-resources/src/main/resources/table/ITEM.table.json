@@ -3,6 +3,18 @@
 	"fields": {
 		"NodeId": {
 			"type": "uuid"
+		},
+		"ItemCode": {
+			"type": "string",
+			"size": 48
+		},
+		"ItemName": {
+			"type": "string",
+			"size": 48
+		},
+		"Active": {
+			"type": "string",
+			"size": 1
 		}
 	}
 }

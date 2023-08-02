@@ -1,4 +1,4 @@
-package example;
+package dcmm;
 
 import org.springframework.context.annotation.Configuration;
 

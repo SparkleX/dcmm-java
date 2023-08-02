@@ -1,0 +1,14 @@
+[
+	{
+		"NodeId": "791a2e60-310d-11ee-be56-0242ac120002",
+		"DocNum": 1,
+		"CardId": "ecd3631c-2f91-11ee-be56-0242ac120002",
+		"DocTotal": "123.99"
+	},
+	{
+		"NodeId": "791a3356-310d-11ee-be56-0242ac120002",
+		"DocNum": 2,
+		"CardId": "ecd36592-2f91-11ee-be56-0242ac120002",
+		"DocTotal": "500"
+	}
+]

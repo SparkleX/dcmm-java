@@ -1,0 +1,9 @@
+{	"json.schemas": [
+		{
+			"fileMatch": [
+				"*.table.json"
+			],
+			"url": "./src/main/resources/schema/table/index.json"
+		}
+	]
+}

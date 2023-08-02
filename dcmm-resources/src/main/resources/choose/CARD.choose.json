@@ -1,0 +1,18 @@
+{
+	"columns": {
+		"CardCode": {
+			"name":"Business Partner Code"
+		},
+		"Balance": {
+			"name":"Balance"
+		},
+		"Active": {
+			"name":"Contact Person"
+		}
+	},
+	"order": [
+		"CardCode",
+		"Balance",
+		"Active"
+	]
+}

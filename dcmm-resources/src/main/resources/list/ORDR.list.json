@@ -1,14 +1,18 @@
 {
 	"columns": {
 		"DocNum": {
-			"name":"Document Number"
+			"name": "Document Number"
 		},
-		"CardCode": {
-			"name":"Business Partner Code"
+		"CardId": {
+			"name": "Business Partner"
+		},
+		"DocTotal": {
+			"name": "Total"
 		}
 	},
 	"order": [
 		"DocNum",
-		"CardCode"
+		"CardId",
+		"DocTotal"
 	]
 }

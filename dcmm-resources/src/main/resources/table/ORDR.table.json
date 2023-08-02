@@ -4,17 +4,14 @@
 		"NodeId": {
 			"type": "uuid"
 		},
-		"CardCode": {
-			"type": "string",
-			"size": 48
+		"DocNum": {
+			"type": "number"
 		},
-		"Balance": {
+		"CardId": {
+			"type": "uuid"
+		},
+		"DocTotal": {
 			"type": "decimal"
-		},
-		"Active": {
-			"type": "string",
-			"size": 1,
-			"codes": "YesNo"
 		}
 	}
 }
