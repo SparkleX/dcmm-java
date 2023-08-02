@@ -28,7 +28,7 @@ public interface ${name}Mapper extends BaseMapper<${name}Model> {
 	@Select("select * from ${name}")
 	List<${name}Model> findAll();
 	@Select("select * from ${name} where NodeId=${r"#{id}"}")
-	${name}Model find(Integer id);
+	${name}Model find(String id);
 
     @Insert("${sqlInsert}")
 	void insert(${name}Model data);

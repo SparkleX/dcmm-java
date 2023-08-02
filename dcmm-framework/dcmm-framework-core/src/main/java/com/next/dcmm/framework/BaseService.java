@@ -1,6 +1,7 @@
 package com.next.dcmm.framework;
 
 import java.util.List;
+import java.util.UUID;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.transaction.annotation.Transactional;
@@ -21,6 +22,7 @@ public class BaseService<T extends BaseModel, DAO extends BaseMapper<T>> {
 	}
 	@Transactional
 	public String create(T data) {
+		data.NodeId = UUID.randomUUID().toString();
 		dao.insert(data);
 		return data.NodeId;
 	}
@@ -29,7 +31,7 @@ public class BaseService<T extends BaseModel, DAO extends BaseMapper<T>> {
 		data.NodeId = id;
 		int rt = dao.update(data);
 		if(rt!=1) {
-			throw new RuntimeException("delete failed");
+			throw new RuntimeException("update failed");
 		}
 	}
 	@Transactional
