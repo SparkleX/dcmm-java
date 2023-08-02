@@ -45,6 +45,15 @@
 		},
 		"descField": {
 			"type": "string"
+		},
+		"arrayTables": {
+			"type": "object",
+			"additionalProperties": false,
+			"patternProperties": {
+				"^[A-Z][A-Za-z0-9]{1,9}$": {
+					"$ref": "./ArrayTable.json"
+				}
+			}
 		}
 	},
 	"required": [

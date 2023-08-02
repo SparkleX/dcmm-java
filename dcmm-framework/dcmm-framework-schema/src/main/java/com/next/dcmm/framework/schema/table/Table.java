@@ -4,14 +4,22 @@ import java.util.List;
 import java.util.Map;
 
 public class Table {
-    public String name;
-
-    public Map<String, Field> fields;
     public String getName() {
-        return name;
-    }
-    public Map<String, Field> getFields() {
-        return fields;
-    }
+		return name;
+	}
+	public Map<String, Field> getFields() {
+		return fields;
+	}
+	public Map<String, String> getArrayTables() {
+		return arrayTables;
+	}
+	public List<String> getFieldsOrder() {
+		return fieldsOrder;
+	}
+	public String name;
+    public Map<String, Field> fields;
+	public Map<String, String> arrayTables;
     public List<String> fieldsOrder;
+
+
 }

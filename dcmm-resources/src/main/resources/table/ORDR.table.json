@@ -1,5 +1,8 @@
 {
 	"name": "ORDR",
+	"arrayTables": {
+		"DOC1": "ORDR1"
+	},
 	"fields": {
 		"NodeId": {
 			"type": "uuid"

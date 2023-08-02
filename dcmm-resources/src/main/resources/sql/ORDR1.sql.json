@@ -1,9 +1,9 @@
 {
-	"findAll2": {
-		"sql": "select * from ORDR",
-		"returnType": "List<Map<String,Object>>",
+	"findByParent": {
+		"sql": "select * from ORDR1 where ParentId = #{parentId}",
+		"returnType": "List<ORDR1Model>",
 		"params": {
-			"nodeId": "String"
+			"parentId": "String"
 		}
 	}
 }
