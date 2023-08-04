@@ -27,7 +27,7 @@ public class DdlBuilder {
 		case Field.FieldTypeNumber:
 			return "int";
 		case Field.FieldTypeDecimal:
-			return "decimal";
+			return "decimal(19,6)";
 		case Field.FieldTypeDate:
 			return "datetime";
 		case Field.FieldTypeTime:
