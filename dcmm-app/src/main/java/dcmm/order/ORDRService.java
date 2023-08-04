@@ -27,7 +27,10 @@ public class ORDRService extends BaseService<ORDRModel, ORDRMapper> {
 	
 	@Override
 	public String create(ORDRModel data) {
-		String rt = super.create(data);
+		if(data.DOC1 == null || data.DOC1.isEmpty()) {
+			throw new RuntimeException("Order without lines");
+		}
+		String rt = super.create(data);		
 		int lineNum = 0;
 		for (ORDR1Model drDOC1:data.DOC1) {
 			drDOC1.NodeId = UUID.randomUUID().toString();
@@ -41,6 +44,9 @@ public class ORDRService extends BaseService<ORDRModel, ORDRMapper> {
 	
 	@Override
 	public void update(String id, ORDRModel data) {
+		if(data.DOC1 == null || data.DOC1.isEmpty()) {
+			throw new RuntimeException("Order without lines");
+		}
 		super.update(id, data);
 		int lineNum = 0;
 		for (ORDR1Model drDOC1:data.DOC1) {
