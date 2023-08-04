@@ -15,6 +15,9 @@ public class ${name}Model extends BaseModel{
         <#case "string">
     public String ${fieldName};
         <#break>
+        <#case "number">
+    public Integer ${fieldName};
+        <#break>        
         <#case "decimal">
     public BigDecimal ${fieldName};
         <#break>

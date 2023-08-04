@@ -5,5 +5,12 @@
 		"params": {
 			"parentId": "String"
 		}
+	},
+	"deleteByParent": {
+		"sql": "delete * from ORDR1 where ParentId = #{parentId}",
+		"returnType": "int",
+		"params": {
+			"parentId": "String"
+		}	
 	}
 }

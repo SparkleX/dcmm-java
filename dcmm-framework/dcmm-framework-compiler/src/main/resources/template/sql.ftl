@@ -17,7 +17,13 @@ import gen.model.${name}Model;
 @Mapper
 public interface ${name}Mapper extends BaseMapper<${name}Model> {
 <#list data as methodName, method>
-    @Select("${method.sql}")
+	<#if method.sql?starts_with("delete")>
+	@Delete("${method.sql}")
+	<#elseif method.sql?starts_with("update")>
+	@Update("${method.sql}")
+	<#else>
+	@Select("${method.sql}")
+	</#if>    
     ${method.returnType} ${methodName}(
     <#list method.params as paramName, paramType>
         ${paramType} ${paramName}<#if (paramName_has_next)>,</#if>
